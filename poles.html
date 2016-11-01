@@ -1,0 +1,149 @@
+<html>
+	 <head>
+		 <style type="text/css">
+			 #indextable { 
+				 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+				 border-collapse: collapse; 
+			 } 
+			 #indextable td { 
+				 border: 1px solid #ddd; 
+				 padding: 6px; 
+			 } 
+			 #indextable tr:nth-child(even){background-color: #f2f2f2;} 
+			 #indextable tr:hover {background-color: #ddd;}
+			 #indextable td:hover {background-color: #119; color: white;}
+			 .button { 
+			 background-color: white; 
+			 color: black; 
+			 border: 2px solid #555555; 
+			 border-radius: 10%; 
+			 padding: 16px 32px; 
+			 text-align: center; 
+			 text-decoration: none; 
+			 display: inline-block; 
+			 font-size: 16px; 
+			 margin: 4px 2px; 
+			 -webkit-transition-duration: 0.2s; 
+			 transition-duration: 0.4s; 
+			 cursor: pointer; 
+			 } 
+			 .button:hover { 
+			 background-color: #555555; 
+			 color: white; 
+			 } 
+		 </style>
+		 <script>
+			 function popPic() {picDisplayed = window.open(document.DIST.src, document.DIST.src,'statusbar=no, scrollbars=auto, status=no, resizable=no, width=850, height=1250');}
+			 var pm = "minus";
+			 var model = "dmt2001";
+			 function showPic(row, col)
+			 {
+			    var dist = "img/"
+			    dist += "angmom-"
+			    dist += row;
+			    dist += "_"
+			    dist += "multipole-"
+			    dist += col;
+			    dist += "_pm-";
+			    dist += pm;
+			    dist += "_model-";
+			    dist += model;
+			    dist += ".png"
+			    document.DIST.src = dist
+			 }
+			 function changepm()
+			 {
+				 var pmTitle = "pm " ;
+				 pmTitle += pm;
+				 document.getElementById("pmButtons").innerHTML = pmTitle;
+			 }
+			 function changemodel()
+			 {
+				 var modelTitle = "model " ;
+				 modelTitle += model;
+				 document.getElementById("modelButtons").innerHTML = modelTitle;
+			 }
+		 </script>
+	 </head>
+	 <body>
+		 <center>
+			 <table cellpadding=10> 
+				 <tr> 
+					 <td colspan=2> 
+						 <table> <tr>
+							 <td id="pmButtons" align=center colspan=2>pm minus</td></tr><tr>
+							 <td><button class="button" onclick="javascript:pm='minus' ; changepm(); ">minus</button></td>
+							 <td><button class="button" onclick="javascript:pm='plus' ; changepm(); ">plus</button></td>
+						 </tr></table>
+					 </td> 
+				 </tr> 
+				 <tr> 
+					 <td colspan=2> 
+						 <table> <tr>
+							 <td id="modelButtons" align=center colspan=8>model dmt2001</td></tr><tr>
+							 <td><button class="button" onclick="javascript:model='dmt2001' ; changemodel(); ">dmt2001</button></td>
+							 <td><button class="button" onclick="javascript:model='hlee' ; changemodel(); ">hlee</button></td>
+							 <td><button class="button" onclick="javascript:model='janr' ; changemodel(); ">janr</button></td>
+							 <td><button class="button" onclick="javascript:model='maid2002' ; changemodel(); ">maid2002</button></td>
+							 <td><button class="button" onclick="javascript:model='maid2003' ; changemodel(); ">maid2003</button></td>
+							 <td><button class="button" onclick="javascript:model='maid2003woroper' ; changemodel(); ">maid2003woroper</button></td>
+							 <td><button class="button" onclick="javascript:model='maid2007' ; changemodel(); ">maid2007</button></td>
+							 <td><button class="button" onclick="javascript:model='said2008' ; changemodel(); ">said2008</button></td>
+						 </tr></table>
+					 </td> 
+				 </tr> 
+				 <tr> 
+					 <td> 
+						 <table id="indextable" class="indextable"> 
+							 <tr> 
+								 <td> <sub> angmom</sub> <sup> multipole</sup> </td>
+								 <td>E</td>
+								 <td>M</td>
+								 <td>S</td>
+							 </tr> 
+							 <tr> 
+								 <td>0</td>
+								 <td onclick="popPic()" onmouseover="showPic('0', 'E')" />
+								 <td onclick="popPic()" onmouseover="showPic('0', 'M')" />
+								 <td onclick="popPic()" onmouseover="showPic('0', 'S')" />
+							 </tr> 
+							 <tr> 
+								 <td>1</td>
+								 <td onclick="popPic()" onmouseover="showPic('1', 'E')" />
+								 <td onclick="popPic()" onmouseover="showPic('1', 'M')" />
+								 <td onclick="popPic()" onmouseover="showPic('1', 'S')" />
+							 </tr> 
+							 <tr> 
+								 <td>2</td>
+								 <td onclick="popPic()" onmouseover="showPic('2', 'E')" />
+								 <td onclick="popPic()" onmouseover="showPic('2', 'M')" />
+								 <td onclick="popPic()" onmouseover="showPic('2', 'S')" />
+							 </tr> 
+							 <tr> 
+								 <td>3</td>
+								 <td onclick="popPic()" onmouseover="showPic('3', 'E')" />
+								 <td onclick="popPic()" onmouseover="showPic('3', 'M')" />
+								 <td onclick="popPic()" onmouseover="showPic('3', 'S')" />
+							 </tr> 
+							 <tr> 
+								 <td>4</td>
+								 <td onclick="popPic()" onmouseover="showPic('4', 'E')" />
+								 <td onclick="popPic()" onmouseover="showPic('4', 'M')" />
+								 <td onclick="popPic()" onmouseover="showPic('4', 'S')" />
+							 </tr> 
+							 <tr> 
+								 <td>5</td>
+								 <td onclick="popPic()" onmouseover="showPic('5', 'E')" />
+								 <td onclick="popPic()" onmouseover="showPic('5', 'M')" />
+								 <td onclick="popPic()" onmouseover="showPic('5', 'S')" />
+							 </tr> 
+						 </table> 
+					 </td> 
+					 <td> 
+						 <img name = "DIST" width="650px" src="img/angmom-1_multipole-M_pm-plus_model-maid2007.png"/> 
+					 </td> 
+				 </tr> 
+			 </table> 
+		 </center>
+	 </body>
+</html>
